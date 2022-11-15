@@ -48,8 +48,10 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      DetailsPage(index: index),
+                                  builder: (context) => DetailsPage(
+                                    index: index,
+                                    exercises: provider.allData[index],
+                                  ),
                                 ));
                           },
                           child: Container(
@@ -85,8 +87,10 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      DetailsPage(index: index),
+                                  builder: (context) => DetailsPage(
+                                    index: index,
+                                    exercises: provider.allData[index],
+                                  ),
                                 ));
                           },
                           child: Image.network(
@@ -115,7 +119,10 @@ class _HomePageState extends State<HomePage> {
                   onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DetailsPage(index: index),
+                        builder: (context) => DetailsPage(
+                          index: index,
+                          exercises: provider.allData[index],
+                        ),
                       )),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),

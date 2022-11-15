@@ -1,10 +1,12 @@
 import 'package:fitnessapp/api.dart';
+import 'package:fitnessapp/model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({super.key, required this.index});
+  const DetailsPage({super.key, required this.index, required this.exercises});
   final int index;
+  final Exercises? exercises;
 
   @override
   Widget build(BuildContext context) {
